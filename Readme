@@ -1,0 +1,82 @@
+# 📄 Document Q&A Chatbot
+
+A document-based question-answering system built using **n8n**, **Pinecone**, **Hugging Face**, and **OpenAI**.  
+This project allows users to upload PDF files and ask questions directly about their content through a conversational interface.
+
+---
+
+## 🚀 Features
+
+- Automatically loads and processes PDF documents from Google Drive  
+- Splits text into smaller, manageable chunks for embedding  
+- Generates embeddings using **Hugging Face** models  
+- Stores vector embeddings efficiently in **Pinecone**  
+- Retrieves the most relevant text segments for each query  
+- Uses **OpenAI Chat** models to generate accurate and context-aware answers  
+- Provides an interactive document-based Q&A workflow built entirely in **n8n**
+
+---
+
+## 🧠 Workflow Explanation
+
+1. **Document Ingestion:**  
+   PDFs are automatically fetched from a connected Google Drive folder.  
+   Each file is converted to text for further processing.
+
+2. **Text Chunking:**  
+   The text is split into smaller sections to improve embedding and retrieval accuracy.
+
+3. **Embedding Generation:**  
+   The **Hugging Face Embedding Node** generates numerical vector representations (embeddings) of each chunk.
+
+4. **Vector Storage:**  
+   Embeddings are stored in a **Pinecone** index for fast and scalable similarity searches.
+
+5. **Query Workflow:**  
+   When a user asks a question, the query is embedded and matched against the most relevant chunks from Pinecone.
+
+6. **Response Generation:**  
+   The **OpenAI Chat Node** uses the retrieved context to generate natural and precise answers.
+
+7. **Chat Interface:**  
+   The system allows users to interact with their documents as if they were chatting with them.
+
+---
+
+## 🧩 Tech Stack
+
+- **n8n** (Automation and Workflow Orchestration)  
+- **Pinecone** (Vector Database)  
+- **Hugging Face** (Text Embeddings)  
+- **OpenAI API** (LLM for Q&A)  
+- **Google Drive API** (Document Source)
+
+---
+
+## 🖼️ Example Workflow Diagram
+
+*(You can add a screenshot of your n8n workflow here)*  
+`![Workflow Diagram](path/to/workflow.png)`
+
+---
+
+## 💡 Future Improvements
+
+- Add support for multiple document types (e.g., DOCX, TXT)  
+- Build a simple web interface for uploading and querying files  
+- Integrate authentication for personalized document storage
+
+---
+
+## 🔗 Project Link
+
+If your project is public, add it here:  
+[GitHub Repository](https://github.com/your-username/document-qa-chatbot)
+
+---
+
+## 👨‍💻 Author
+
+**Abdullah Khan**  
+*Full-Stack Developer | AI Enthusiast*  
+[LinkedIn](https://www.linkedin.com) • [GitHub](https://github.com/your-username)
